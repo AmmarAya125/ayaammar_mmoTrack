@@ -5,6 +5,8 @@ class Utilisateur {
   String email;
   String motDepass;
   String role; // "client", "technicien", "administrateur"
+  String status;
+
 
   Utilisateur({
     required this.id,
@@ -13,6 +15,8 @@ class Utilisateur {
     required this.email,
     required this.motDepass,
     required this.role,
+        required this.status,
+
   });
 
   // Méthode fromMap
@@ -24,6 +28,7 @@ class Utilisateur {
       email: map['email'] ?? '',
       motDepass: map['motDepass'] ?? '',
       role: map['role'] ?? '',
+       status: map['status'] ?? '',
     );
   }
 
@@ -35,6 +40,8 @@ class Utilisateur {
       'prenom': prenom,
       'email': email,
       'role': role,
+            'status': status,
+
     };
 
     // Inclure le mot de passe uniquement si demandé
